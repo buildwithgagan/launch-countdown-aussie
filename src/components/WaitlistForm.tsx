@@ -48,7 +48,7 @@ const WaitlistForm = () => {
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10 h-12 bg-black/70 border border-primary/30 focus:border-primary form-glow text-white rounded-md w-full"
+                  className="pl-10 h-14 text-base md:text-lg bg-black/70 border border-primary/30 focus:border-primary form-glow text-white rounded-md w-full"
                   disabled={isSubmitting}
                   required
                 />
@@ -57,7 +57,7 @@ const WaitlistForm = () => {
             
             <Button 
               type="submit" 
-              className="h-12 bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none animate-fade-in hover:animate-glow rounded-md w-full md:w-auto md:px-8"
+              className="h-14 text-base md:text-lg bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none animate-fade-in hover:animate-glow rounded-md w-full md:w-auto md:px-8"
               disabled={isSubmitting}
             >
               {isSubmitting ? 
