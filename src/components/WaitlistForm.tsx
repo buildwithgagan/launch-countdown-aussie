@@ -32,22 +32,29 @@ const WaitlistForm = () => {
 
   return (
     <div className="w-full max-w-md mx-auto animate-fade-in">
-      <Card className="border border-primary/20 bg-black/40 backdrop-blur-sm shadow-lg">
-        <CardContent className="pt-4 px-3 sm:px-6 sm:pt-6">
-          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+      <Card className="border border-primary/20 bg-black/50 backdrop-blur-md shadow-2xl hover:shadow-primary/10 transition-all duration-500">
+        <CardContent className="pt-6 px-6">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <Input
-                  type="email"
-                  placeholder="Enter your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10 h-10 sm:h-12 px-4 bg-[#121212] border border-primary/30 focus:border-primary form-glow text-white animate-fade-in transition-all duration-300"
-                  disabled={isSubmitting}
-                  required
-                />
+              <h3 className="text-lg font-medium text-white font-fustat">Join Our Waitlist</h3>
+              <p className="text-sm text-muted-foreground">Be the first to get access when we launch</p>
+              
+              <div className="relative mt-2 group">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-md blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                <div className="relative flex items-center">
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-primary" />
+                  <Input
+                    type="email"
+                    placeholder="Enter your email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="pl-10 h-12 bg-black/70 border border-primary/30 focus:border-primary form-glow text-white rounded-md"
+                    disabled={isSubmitting}
+                    required
+                  />
+                </div>
               </div>
+              
               <div className="flex items-center space-x-2 ml-1">
                 <Checkbox 
                   id="subscribe" 
@@ -57,7 +64,7 @@ const WaitlistForm = () => {
                 />
                 <label 
                   htmlFor="subscribe" 
-                  className="text-xs sm:text-sm text-muted-foreground cursor-pointer hover:text-white transition-colors"
+                  className="text-sm text-muted-foreground cursor-pointer hover:text-white transition-colors"
                 >
                   Send me product updates and news
                 </label>
@@ -66,7 +73,7 @@ const WaitlistForm = () => {
             
             <Button 
               type="submit" 
-              className="w-full h-10 sm:h-12 px-6 bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none animate-fade-in hover:animate-glow"
+              className="w-full h-12 bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none animate-fade-in hover:animate-glow rounded-md"
               disabled={isSubmitting}
             >
               {isSubmitting ? 
@@ -81,14 +88,14 @@ const WaitlistForm = () => {
               }
             </Button>
           </form>
+
+          <div className="text-center mt-4">
+            <p className="text-xs text-muted-foreground">
+              No spam, just important updates about our launch.
+            </p>
+          </div>
         </CardContent>
       </Card>
-      
-      <div className="text-center mt-2 sm:mt-3">
-        <p className="text-xs text-muted-foreground animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.6s] opacity-0">
-          No spam, just important updates about our launch.
-        </p>
-      </div>
     </div>
   );
 };
