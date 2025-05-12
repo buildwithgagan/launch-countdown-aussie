@@ -34,13 +34,13 @@ const WaitlistForm = () => {
           placeholder="Enter your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-grow h-12 px-4 bg-white border border-accent focus:border-primary focus:ring-1 focus:ring-primary"
+          className="flex-grow h-12 px-4 bg-[#121212] border border-primary/30 focus:border-primary form-glow text-white"
           disabled={isSubmitting}
           required
         />
         <Button 
           type="submit" 
-          className="h-12 px-6 bg-primary hover:bg-primary/90 text-white font-medium transition-colors"
+          className="h-12 px-6 bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors glow-effect"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Joining..." : "Join Waitlist"}

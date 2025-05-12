@@ -90,7 +90,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#080808] text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -106,7 +106,8 @@
 }
 
 .countdown-item {
-  @apply flex flex-col items-center justify-center bg-white rounded-lg p-2 md:p-4 shadow-sm border border-accent;
+  @apply flex flex-col items-center justify-center bg-secondary rounded-lg p-2 md:p-4 border border-primary/20 backdrop-blur-sm;
+  box-shadow: 0 0 10px rgba(20, 241, 149, 0.2);
 }
 
 .countdown-value {
@@ -115,4 +116,12 @@
 
 .countdown-label {
   @apply text-xs md:text-sm text-muted-foreground mt-1;
+}
+
+.glow-effect {
+  box-shadow: 0 0 10px rgba(20, 241, 149, 0.3), 0 0 20px rgba(20, 241, 149, 0.2), 0 0 30px rgba(20, 241, 149, 0.1);
+}
+
+.form-glow:focus {
+  box-shadow: 0 0 0 2px rgba(20, 241, 149, 0.3);
 }

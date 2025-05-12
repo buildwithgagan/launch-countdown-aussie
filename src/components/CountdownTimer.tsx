@@ -54,8 +54,8 @@ const CountdownTimer = () => {
   return (
     <div className="countdown-container animate-fade-in">
       {timeUnits.map((unit, index) => (
-        <div key={index} className="countdown-item">
-          <span className="countdown-value animate-pulse">
+        <div key={index} className="countdown-item animate-glow">
+          <span className="countdown-value">
             {String(unit.value).padStart(2, '0')}
           </span>
           <span className="countdown-label">{unit.label}</span>

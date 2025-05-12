@@ -26,24 +26,24 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#6F7497",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#14F195",
+          foreground: "#000000",
         },
         secondary: {
-          DEFAULT: "#F8F8F8",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "rgba(20, 241, 149, 0.1)",
+          foreground: "#ffffff",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "#6F7497",
+          DEFAULT: "rgba(255, 255, 255, 0.7)",
+          foreground: "rgba(255, 255, 255, 0.9)",
         },
         accent: {
-          DEFAULT: "#E7E7E7",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "rgba(20, 241, 149, 0.2)",
+          foreground: "#14F195",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -90,16 +90,21 @@ export default {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 5px rgba(20, 241, 149, 0.5)" },
+          "50%": { boxShadow: "0 0 20px rgba(20, 241, 149, 0.8)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in": "fade-in 0.5s ease-out forwards",
+        glow: "glow 2s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "subtle-gradient": "linear-gradient(to bottom right, #F8F8F8, #FFFFFF, #F2F2F2)",
+        "subtle-gradient": "linear-gradient(to bottom right, #0a0a0a, #121212, #080808)",
       },
     },
   },
