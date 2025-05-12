@@ -10,11 +10,23 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-subtle-gradient">
+    <div className="min-h-screen w-full flex items-center justify-center relative">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/b327ae7f-abd4-4ba2-b4ac-6b66fbf108bd.png" 
+          alt="Server Room Background" 
+          className="w-full h-full object-cover opacity-50"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+      </div>
+      
+      {/* Gradient overlays */}
       <div className="absolute inset-0 z-0 opacity-50">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-primary/10 blur-3xl"></div>
       </div>
+      
       <div className="container px-4 py-12 md:py-20 mx-auto relative z-10">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="mb-8 animate-fade-in">
