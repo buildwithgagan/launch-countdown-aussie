@@ -16,13 +16,13 @@ const Index = () => {
         <img 
           src="/lovable-uploads/b327ae7f-abd4-4ba2-b4ac-6b66fbf108bd.png" 
           alt="Server Room Background" 
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover opacity-95"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-25"></div>
       </div>
       
       {/* Gradient overlays */}
-      <div className="absolute inset-0 z-0 opacity-50">
+      <div className="absolute inset-0 z-0 opacity-40">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-primary/10 blur-3xl"></div>
       </div>
