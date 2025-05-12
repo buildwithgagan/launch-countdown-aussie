@@ -31,19 +31,19 @@ const WaitlistForm = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto mt-8 animate-fade-in">
+    <div className="w-full max-w-md mx-auto animate-fade-in">
       <Card className="border border-primary/20 bg-black/40 backdrop-blur-sm shadow-lg">
-        <CardContent className="pt-6">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <CardContent className="pt-4 px-3 sm:px-6 sm:pt-6">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
             <div className="space-y-2">
               <div className="relative">
-                <Mail className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                 <Input
                   type="email"
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10 flex-grow h-12 px-4 bg-[#121212] border border-primary/30 focus:border-primary form-glow text-white animate-fade-in transition-all duration-300"
+                  className="pl-10 h-10 sm:h-12 px-4 bg-[#121212] border border-primary/30 focus:border-primary form-glow text-white animate-fade-in transition-all duration-300"
                   disabled={isSubmitting}
                   required
                 />
@@ -57,7 +57,7 @@ const WaitlistForm = () => {
                 />
                 <label 
                   htmlFor="subscribe" 
-                  className="text-sm text-muted-foreground cursor-pointer hover:text-white transition-colors"
+                  className="text-xs sm:text-sm text-muted-foreground cursor-pointer hover:text-white transition-colors"
                 >
                   Send me product updates and news
                 </label>
@@ -66,7 +66,7 @@ const WaitlistForm = () => {
             
             <Button 
               type="submit" 
-              className="w-full h-12 px-6 bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none animate-fade-in hover:animate-glow"
+              className="w-full h-10 sm:h-12 px-6 bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none animate-fade-in hover:animate-glow"
               disabled={isSubmitting}
             >
               {isSubmitting ? 
@@ -84,8 +84,8 @@ const WaitlistForm = () => {
         </CardContent>
       </Card>
       
-      <div className="text-center mt-4">
-        <p className="text-sm text-muted-foreground animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.6s] opacity-0">
+      <div className="text-center mt-2 sm:mt-3">
+        <p className="text-xs text-muted-foreground animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.6s] opacity-0">
           No spam, just important updates about our launch.
         </p>
       </div>

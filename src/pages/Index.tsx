@@ -11,7 +11,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center relative">
+    <div className="h-screen w-full flex items-center justify-center relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -35,51 +35,53 @@ const Index = () => {
         <div className="absolute top-1/3 right-1/4 w-56 h-56 rounded-full bg-blue-500/5 blur-3xl animate-pulse" style={{animationDuration: '8s'}}></div>
       </div>
       
-      <div className="container px-4 py-12 md:py-20 mx-auto relative z-10">
+      <div className="container max-h-screen px-4 py-6 mx-auto relative z-10 overflow-y-auto">
         {/* Light beam effect behind logo */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-40 bg-gradient-to-b from-primary/80 to-transparent blur-lg"></div>
         
-        <div className="flex flex-col items-center justify-center text-center">
-          <div className="mb-8 animate-fade-in hover:scale-105 transition-transform duration-500">
+        <div className="flex flex-col items-center justify-center text-center h-full">
+          <div className="mb-4 sm:mb-6 animate-fade-in hover:scale-105 transition-transform duration-500">
             <img 
               src="/lovable-uploads/bd1abce8-ef88-41d9-a68c-a0d3dc79f96f.png" 
               alt="Aussivo Logo" 
-              className="h-16 md:h-20 mx-auto"
+              className="h-12 md:h-16 mx-auto"
             />
           </div>
           
-          <h1 className="font-fustat text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] animate-pulse" style={{animationDuration: '3s'}}>
+          <h1 className="font-fustat text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] animate-pulse" style={{animationDuration: '3s'}}>
             We're launching soon!
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 animate-fade-in animate-[fadeIn_0.8s_ease-out_forwards_0.3s] opacity-0">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mb-6 animate-fade-in animate-[fadeIn_0.8s_ease-out_forwards_0.3s] opacity-0">
             Powering the Future of Cloud Infrastructure! Join our waitlist 
             to be the first to experience seamless, scalable, and secure cloud solutions.
           </p>
           
-          <div className="w-full my-8 md:my-12">
+          <div className="w-full my-4 sm:my-6">
             <CountdownTimer />
           </div>
           
-          <WaitlistForm />
+          <div className="w-full sm:w-auto sm:min-w-[320px]">
+            <WaitlistForm />
+          </div>
           
           {/* Social Media Links */}
-          <div className="mt-12 flex items-center justify-center space-x-6 animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.8s] opacity-0">
+          <div className="mt-4 sm:mt-6 flex items-center justify-center space-x-6 animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.8s] opacity-0">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Facebook">
-              <Facebook size={24} />
+              <Facebook size={20} />
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Twitter">
-              <Twitter size={24} />
+              <Twitter size={20} />
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Instagram">
-              <Instagram size={24} />
+              <Instagram size={20} />
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="LinkedIn">
-              <Linkedin size={24} />
+              <Linkedin size={20} />
             </a>
           </div>
           
-          <p className="text-xs text-muted-foreground mt-4 opacity-70 animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.9s] opacity-0">
+          <p className="text-xs text-muted-foreground mt-2 opacity-70 animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.9s] opacity-0">
             Follow us for updates
           </p>
         </div>
