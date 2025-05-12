@@ -17,6 +17,14 @@ const Index = () => {
       </div>
       <div className="container px-4 py-12 md:py-20 mx-auto relative z-10">
         <div className="flex flex-col items-center justify-center text-center">
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src="https://old.aussivo.com/images/logo.svg" 
+              alt="Aussivo Logo" 
+              className="h-16 md:h-20 mx-auto"
+            />
+          </div>
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 animate-fade-in">
             We're launching soon!
           </h1>
