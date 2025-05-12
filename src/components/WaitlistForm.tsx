@@ -4,12 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Mail } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
 
 const WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [subscribeToUpdates, setSubscribeToUpdates] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,27 +69,6 @@ const WaitlistForm = () => {
                 : "Join Waitlist"
               }
             </Button>
-          </div>
-          
-          <div className="flex items-center mt-3 justify-center md:justify-start">
-            <Checkbox 
-              id="subscribe" 
-              checked={subscribeToUpdates}
-              onCheckedChange={(checked) => setSubscribeToUpdates(checked as boolean)}
-              className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-            />
-            <label 
-              htmlFor="subscribe" 
-              className="text-sm text-muted-foreground cursor-pointer hover:text-white transition-colors ml-2"
-            >
-              Send me product updates and news
-            </label>
-          </div>
-
-          <div className="text-center md:text-left mt-3">
-            <p className="text-xs text-muted-foreground">
-              No spam, just important updates about our launch.
-            </p>
           </div>
         </form>
       </div>
