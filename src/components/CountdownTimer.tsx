@@ -26,7 +26,7 @@ const CountdownTimer = () => {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
+        minutes: Math.floor((difference / (1000 * 60)) % 60), // Fixed calculation
         seconds: Math.floor((difference / 1000) % 60)
       };
     }
@@ -37,6 +37,9 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
+    // Run timer immediately and then every second
+    setTimeLeft(calculateTimeLeft());
+    
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
