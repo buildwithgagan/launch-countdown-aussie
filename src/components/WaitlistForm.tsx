@@ -40,7 +40,7 @@ const WaitlistForm = () => {
         />
         <Button 
           type="submit" 
-          className="h-12 px-6 bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors glow-effect"
+          className="h-12 px-6 bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Joining..." : "Join Waitlist"}
