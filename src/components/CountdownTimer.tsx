@@ -26,7 +26,7 @@ const CountdownTimer = () => {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60), // Fixed calculation
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
         seconds: Math.floor((difference / 1000) % 60)
       };
     }
@@ -37,15 +37,18 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
-    // Run timer immediately and then every second
+    // Calculate time immediately on component mount
     setTimeLeft(calculateTimeLeft());
     
+    // Set up interval to update every second
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      const newTimeLeft = calculateTimeLeft();
+      setTimeLeft(newTimeLeft);
     }, 1000);
 
+    // Clean up interval on unmount
     return () => clearInterval(timer);
-  }, []);
+  }, []); // Empty dependency array means this runs once on mount
 
   const timeUnits = [
     { value: timeLeft.days, label: 'Days' },
