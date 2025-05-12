@@ -28,7 +28,7 @@ const WaitlistForm = () => {
   };
 
   return (
-    <div className="w-full animate-fade-in">
+    <div className="w-full">
       <div className="w-full py-6 px-4 md:px-6 backdrop-blur-md">
         <form onSubmit={handleSubmit} className="max-w-4xl mx-auto">
           <div className="text-center mb-4">
@@ -55,7 +55,7 @@ const WaitlistForm = () => {
             
             <Button 
               type="submit" 
-              className="h-14 text-sm md:text-base bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.02] disabled:hover:scale-100 disabled:hover:shadow-none animate-fade-in hover:animate-glow rounded-md w-full md:w-auto md:px-8"
+              className="h-14 text-sm md:text-base bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] text-black font-medium transition-colors duration-300 hover:brightness-105 rounded-md w-full md:w-auto md:px-8"
               disabled={isSubmitting}
             >
               {isSubmitting ? 
