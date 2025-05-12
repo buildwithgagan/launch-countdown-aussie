@@ -19,7 +19,7 @@ const Index = () => {
         <div className="flex flex-col items-center justify-center text-center">
           <div className="mb-8 animate-fade-in">
             <img 
-              src="https://old.aussivo.com/images/logo.svg" 
+              src="/lovable-uploads/bd1abce8-ef88-41d9-a68c-a0d3dc79f96f.png" 
               alt="Aussivo Logo" 
               className="h-16 md:h-20 mx-auto"
             />
