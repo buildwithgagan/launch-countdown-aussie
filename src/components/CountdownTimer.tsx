@@ -93,16 +93,19 @@ const CountdownTimer = () => {
           className="flex flex-col items-center justify-center gap-5"
         >
           <div 
-            className="h-16 w-16 sm:w-32 sm:h-32 flex justify-between items-center bg-black/30 backdrop-blur-sm rounded-lg p-3 md:p-6 border border-primary/30"
-            style={{ boxShadow: "0 0 15px rgba(20, 241, 149, 0.2)" }}
+            className="h-16 w-16 sm:w-32 sm:h-32 flex justify-between items-center bg-black/30 backdrop-blur-sm rounded-lg p-3 md:p-6 border border-primary/30 animate-float"
+            style={{ 
+              boxShadow: "0 0 15px rgba(20, 241, 149, 0.2)",
+              animationDelay: `${index * 0.2}s` 
+            }}
           >
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-black/60"></div>
-            <span className="font-mono text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#F4FEF8] to-[#1BF472]">
+            <span className="font-mono text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#F4FEF8] to-[#1BF472] animate-pulse" style={{animationDuration: '2s'}}>
               {unit.value}
             </span>
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-black/60"></div>
           </div>
-          <span className="text-xs md:text-sm text-muted-foreground">
+          <span className="text-xs md:text-sm text-muted-foreground animate-fade-in" style={{animationDelay: `${index * 0.15 + 0.3}s`}}>
             {unit.label}
           </span>
         </div>
