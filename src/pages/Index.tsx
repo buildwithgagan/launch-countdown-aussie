@@ -51,10 +51,6 @@ const Index = () => {
           </div>
           
           <WaitlistForm />
-          
-          <p className="text-sm text-muted-foreground mt-8 animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.6s] opacity-0">
-            No spam, just important updates about our launch.
-          </p>
         </div>
       </div>
     </div>
