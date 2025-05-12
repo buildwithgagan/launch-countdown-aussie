@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import WaitlistForm from "@/components/WaitlistForm";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -51,6 +52,26 @@ const Index = () => {
           </div>
           
           <WaitlistForm />
+          
+          {/* Social Media Links */}
+          <div className="mt-12 flex items-center justify-center space-x-6 animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.8s] opacity-0">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Facebook">
+              <Facebook size={24} />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Twitter">
+              <Twitter size={24} />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Instagram">
+              <Instagram size={24} />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="LinkedIn">
+              <Linkedin size={24} />
+            </a>
+          </div>
+          
+          <p className="text-xs text-muted-foreground mt-4 opacity-70 animate-fade-in animate-[fadeIn_1s_ease-out_forwards_0.9s] opacity-0">
+            Follow us for updates
+          </p>
         </div>
       </div>
     </div>
