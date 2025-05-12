@@ -47,12 +47,6 @@ const WaitlistForm = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="pl-10 h-14 text-base md:text-lg bg-black/70 border border-primary/30 focus:border-primary form-glow text-white rounded-md w-full"
-                  style={{ 
-                    "::placeholder": {
-                      fontSize: "0.95rem", 
-                      color: "#8E9196"
-                    }
-                  }}
                   disabled={isSubmitting}
                   required
                 />
