@@ -97,7 +97,7 @@ const CountdownTimer = () => {
             style={{ boxShadow: "0 0 15px rgba(20, 241, 149, 0.2)" }}
           >
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-black/60"></div>
-            <span className="font-mono text-3xl md:text-5xl font-bold text-primary">
+            <span className="font-mono text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#F4FEF8] to-[#1BF472]">
               {unit.value}
             </span>
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-black/60"></div>
