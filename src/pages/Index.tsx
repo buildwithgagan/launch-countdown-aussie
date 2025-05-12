@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import WaitlistForm from "@/components/WaitlistForm";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, X } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -70,8 +70,8 @@ const Index = () => {
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Facebook">
               <Facebook size={20} />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Twitter">
-              <Twitter size={20} />
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="X">
+              <X size={20} />
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform" aria-label="Instagram">
               <Instagram size={20} />
