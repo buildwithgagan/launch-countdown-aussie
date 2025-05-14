@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Mail } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email || !email.includes('@')) {
@@ -19,12 +20,30 @@ const WaitlistForm = () => {
     
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success("You've been added to our waitlist!");
-      setEmail("");
+    try {
+      // Insert email into Supabase database
+      const { error } = await supabase
+        .from('waitlist_leads')
+        .insert([{ email }]);
+        
+      if (error) {
+        if (error.code === '23505') {
+          // Unique constraint violation - email already exists
+          toast.error("This email is already on our waitlist!");
+        } else {
+          console.error("Error submitting email:", error);
+          toast.error("Failed to join waitlist. Please try again.");
+        }
+      } else {
+        toast.success("You've been added to our waitlist!");
+        setEmail("");
+      }
+    } catch (err) {
+      console.error("Error submitting email:", err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
